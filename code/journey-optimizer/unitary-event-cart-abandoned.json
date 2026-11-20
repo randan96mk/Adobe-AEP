@@ -1,0 +1,20 @@
+{
+  "_id": "3f8c2a1e-9b77-4d55-8f1d-7a2c3e4b5d61",
+  "timestamp": "2026-11-20T10:30:00.000Z",
+  "eventType": "commerce.productListAdds",
+  "identityMap": {
+    "ECID": [{ "id": "56789012345678901234567890123456789012", "authenticatedState": "ambiguous", "primary": false }],
+    "crmId": [{ "id": "CRM-778899", "authenticatedState": "authenticated", "primary": true }]
+  },
+  "_experience": {
+    "campaign": {
+      "orchestration": {
+        "eventID": "<JOURNEY_EVENT_ID_FROM_EVENT_CONFIGURATION>"
+      }
+    }
+  },
+  "commerce": { "productListAdds": { "value": 1 } },
+  "productListItems": [
+    { "SKU": "RUN-100", "name": "Run 100", "priceTotal": 89.99, "quantity": 1, "currencyCode": "GBP" }
+  ]
+}

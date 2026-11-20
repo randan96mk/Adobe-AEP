@@ -1,0 +1,24 @@
+{
+  "_comment": "Illustrative custom action set-up (Administration > Configurations > Actions). Field names in the UI may differ slightly; values below show what to configure.",
+  "name": "CRM - create call-back task",
+  "url": "https://api.example-crm.com/v1/tasks",
+  "method": "POST",
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer <configured via custom authentication>"
+  },
+  "throttling": "set a max calls per second that the CRM can handle",
+  "requestPayload": {
+    "type": "callback",
+    "priority": "high",
+    "customerId": "@{variable: mapped in the journey to profile crmId}",
+    "reason": "@{variable: e.g. 'Cart abandoned, no purchase after 24h'}",
+    "cartValue": "@{variable: mapped from the journey event productListItems priceTotal}"
+  },
+  "responsePayload": { "taskId": "string" },
+  "journeyMapping": {
+    "customerId": "profile identity crmId",
+    "reason": "constant text",
+    "cartValue": "@event{<EVENT_NAME>.productListItems.priceTotal}"
+  }
+}

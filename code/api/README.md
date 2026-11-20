@@ -32,6 +32,7 @@ Never commit `.env` (it is in `.gitignore`). Tokens last about 24 hours; `aep_cl
 | `audiences.py` | List/create segment definitions, run and check evaluation jobs | 8 |
 | `query_job.py` | Run SQL via the Query Service API and wait for the result state | 9 |
 | `destination_flows.py` | List destination dataflows and recent activation runs | 10 |
+| `privacy_request.py` | Submit and track Privacy Service access/delete requests | 14 |
 
 
 ## 3. The four headers
