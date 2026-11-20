@@ -68,6 +68,6 @@ All code uses placeholders such as `<YOUR_TENANT_ID>`. Credentials are read from
 | --- | --- | --- |
 | 1 | README, Ch 0-3, cheat sheets, auth and schema code | Done |
 | 2 | Ch 4-6, identity, ingestion and Web SDK code | Done |
-| 3 | Ch 7-10 | Planned |
+| 3 | Ch 7-10, profile, audience, query and destination code | Done |
 | 4 | Ch 11-14 | Planned |
 | 5 | Ch 15-16, lab, glossary, references | Planned |

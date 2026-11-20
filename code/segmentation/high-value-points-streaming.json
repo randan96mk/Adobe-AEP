@@ -1,0 +1,16 @@
+{
+  "name": "Acme - Points above 4000 - streaming",
+  "profileInstanceId": "ups",
+  "description": "Members whose points balance goes above 4000 (attribute rule, streaming-eligible).",
+  "expression": {
+    "type": "PQL",
+    "format": "pql/text",
+    "value": "_<TENANT_ID>.loyalty.points > 4000"
+  },
+  "schema": { "name": "_xdm.context.profile" },
+  "evaluationInfo": {
+    "batch": { "enabled": false },
+    "continuous": { "enabled": true },
+    "synchronous": { "enabled": false }
+  }
+}

@@ -28,8 +28,11 @@ Never commit `.env` (it is in `.gitignore`). Tokens last about 24 hours; `aep_cl
 | `identity_tools.py` | List/create identity namespaces; normalize and SHA-256 hash emails and phones | 4 |
 | `batch_ingest.py` | Create batch, upload JSON, complete, poll status | 5 |
 | `stream_record.py` | Send an XDM record/event to an HTTP API streaming inlet | 5 |
+| `profile_lookup.py` | Look up a merged profile, its events, list merge policies | 7 |
+| `audiences.py` | List/create segment definitions, run and check evaluation jobs | 8 |
+| `query_job.py` | Run SQL via the Query Service API and wait for the result state | 9 |
+| `destination_flows.py` | List destination dataflows and recent activation runs | 10 |
 
-More scripts arrive with later chapters (ingestion, profile lookup, audiences, query jobs).
 
 ## 3. The four headers
 

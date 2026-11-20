@@ -1,0 +1,16 @@
+{
+  "name": "Acme - Gold members UK - batch",
+  "profileInstanceId": "ups",
+  "description": "Gold loyalty members whose home address is in the UK. Owner: CRM team.",
+  "expression": {
+    "type": "PQL",
+    "format": "pql/text",
+    "value": "_<TENANT_ID>.loyalty.tier = \"gold\" and homeAddress.country = \"GB\""
+  },
+  "schema": { "name": "_xdm.context.profile" },
+  "evaluationInfo": {
+    "batch": { "enabled": true },
+    "continuous": { "enabled": false },
+    "synchronous": { "enabled": false }
+  }
+}
