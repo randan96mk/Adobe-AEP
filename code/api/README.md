@@ -25,6 +25,9 @@ Never commit `.env` (it is in `.gitignore`). Tokens last about 24 hours; `aep_cl
 | `aep_client.py` | Token + headers + request helpers used by every script | 2, 15 |
 | `explore_sandbox.py` | Tenant ID, custom schemas, datasets with Profile flag | 1 |
 | `create_loyalty_schema.py` | Namespace, field group, schema, identity, Profile enablement, dataset | 3 |
+| `identity_tools.py` | List/create identity namespaces; normalize and SHA-256 hash emails and phones | 4 |
+| `batch_ingest.py` | Create batch, upload JSON, complete, poll status | 5 |
+| `stream_record.py` | Send an XDM record/event to an HTTP API streaming inlet | 5 |
 
 More scripts arrive with later chapters (ingestion, profile lookup, audiences, query jobs).
 

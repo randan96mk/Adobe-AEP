@@ -1,0 +1,48 @@
+<!doctype html>
+<!--
+  Web SDK demo page (Chapter 6). Open with a local server (e.g. `npx serve .`) and watch the
+  Network tab (filter "interact") or the Adobe Experience Platform Debugger.
+  Replace <DATASTREAM_ID> and <ORG_ID> with values from your DEVELOPMENT datastream.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web SDK demo</title>
+  <!-- Base code: queue alloy() calls until the library loads -->
+  <script>
+    !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||[]).push(o),n[o]=
+    function(){var u=arguments;return new Promise(function(i,l){n.setTimeout(function(){n[o].q.push([i,l,u])})})},
+    n[o].q=[])})}(window,["alloy"]);
+  </script>
+  <!-- Check https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home for the current version -->
+  <script src="https://cdn1.adoberesources.net/alloy/2.37.1/alloy.min.js" async></script>
+  <script src="consent.js"></script>
+  <script src="commerce-events.js"></script>
+</head>
+<body>
+  <h1>Run 100 running shoe</h1>
+  <button id="consent-yes">Accept cookies</button>
+  <button id="login">Log in as CRM-778899</button>
+  <button id="add">Add to cart</button>
+  <button id="buy">Buy now</button>
+  <script>
+    alloy("configure", {
+      datastreamId: "<DATASTREAM_ID>",
+      orgId: "<ORG_ID>@AdobeOrg",
+      defaultConsent: "pending",
+      clickCollectionEnabled: true,
+      debugEnabled: true                  // logs to the browser console; remove in production
+    });
+
+    const product = { SKU: "RUN-100", name: "Run 100", priceTotal: 89.99, quantity: 1, currencyCode: "GBP" };
+
+    sendPageView("Run 100 - Product");
+    sendProductView(product);
+
+    document.getElementById("consent-yes").onclick = () => grantConsent();
+    document.getElementById("login").onclick = () => sendLogin("CRM-778899");
+    document.getElementById("add").onclick = () => sendAddToCart(product);
+    document.getElementById("buy").onclick = () => sendPurchase("ORD-" + Date.now(), [product], "GBP");
+  </script>
+</body>
+</html>
