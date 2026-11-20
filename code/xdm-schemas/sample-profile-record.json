@@ -5,5 +5,5 @@
   "person": { "name": { "firstName": "Asha", "lastName": "Rao" }, "birthDate": "1990-07-21" },
   "personalEmail": { "address": "asha.rao@example.com" },
   "mobilePhone": { "number": "+441234567890" },
-  "homeAddress": { "city": "London", "country": "United Kingdom", "postalCode": "SW1A 1AA" }
+  "homeAddress": { "city": "London", "country": "GB", "postalCode": "SW1A 1AA" }
 }

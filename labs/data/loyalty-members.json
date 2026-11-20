@@ -1,0 +1,122 @@
+[
+  {
+    "_<TENANT_ID>": {
+      "loyalty": {
+        "loyaltyId": "L-100234",
+        "tier": "gold",
+        "points": 4200,
+        "joinDate": "2021-03-14",
+        "status": "active"
+      }
+    },
+    "person": {
+      "name": {
+        "firstName": "Asha",
+        "lastName": "Rao"
+      }
+    },
+    "personalEmail": {
+      "address": "asha.rao@example.com"
+    },
+    "homeAddress": {
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "_<TENANT_ID>": {
+      "loyalty": {
+        "loyaltyId": "L-100235",
+        "tier": "silver",
+        "points": 1800,
+        "joinDate": "2022-07-01",
+        "status": "active"
+      }
+    },
+    "person": {
+      "name": {
+        "firstName": "Ravi",
+        "lastName": "Kumar"
+      }
+    },
+    "personalEmail": {
+      "address": "ravi.kumar@example.com"
+    },
+    "homeAddress": {
+      "city": "Leeds",
+      "country": "GB"
+    }
+  },
+  {
+    "_<TENANT_ID>": {
+      "loyalty": {
+        "loyaltyId": "L-100236",
+        "tier": "gold",
+        "points": 5100,
+        "joinDate": "2019-11-23",
+        "status": "active"
+      }
+    },
+    "person": {
+      "name": {
+        "firstName": "Maria",
+        "lastName": "Lopez"
+      }
+    },
+    "personalEmail": {
+      "address": "maria.lopez@example.com"
+    },
+    "homeAddress": {
+      "city": "Madrid",
+      "country": "ES"
+    }
+  },
+  {
+    "_<TENANT_ID>": {
+      "loyalty": {
+        "loyaltyId": "L-100237",
+        "tier": "bronze",
+        "points": 300,
+        "joinDate": "2024-02-10",
+        "status": "active"
+      }
+    },
+    "person": {
+      "name": {
+        "firstName": "Tom",
+        "lastName": "Baker"
+      }
+    },
+    "personalEmail": {
+      "address": "tom.baker@example.com"
+    },
+    "homeAddress": {
+      "city": "Bristol",
+      "country": "GB"
+    }
+  },
+  {
+    "_<TENANT_ID>": {
+      "loyalty": {
+        "loyaltyId": "L-100238",
+        "tier": "platinum",
+        "points": 12500,
+        "joinDate": "2018-05-05",
+        "status": "active"
+      }
+    },
+    "person": {
+      "name": {
+        "firstName": "Yuki",
+        "lastName": "Sato"
+      }
+    },
+    "personalEmail": {
+      "address": "yuki.sato@example.com"
+    },
+    "homeAddress": {
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  }
+]

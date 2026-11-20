@@ -79,3 +79,40 @@ Headers: Authorization: Bearer <token> | x-api-key | x-gw-ims-org-id | x-sandbox
 | Profiles over-merged | Identity graph viewer, shared identifiers, graph linking rules |
 | Audience count unexpected | Definition, merge policy, evaluation job, source data freshness |
 | Destination failing | Activation monitoring, identity mapping, consent policy, partner errors |
+
+## 9. Merge policy quick choice (Ch 7)
+
+| Situation | Choose |
+| --- | --- |
+| Person-level use cases | ID stitching = Private graph |
+| Latest value should win | Timestamp ordered (default) |
+| One source must always win (consent platform, CRM) | Dataset precedence, list **all** datasets |
+| Edge personalization | Mark one policy active-on-edge |
+
+## 10. Journey Optimizer quick choice (Ch 12)
+
+| Need | Use |
+| --- | --- |
+| Newsletter, scheduled broadcast | Campaign |
+| Transactional message triggered by another system | API-triggered campaign |
+| React to one person's action | Unitary event journey |
+| React to entering/exiting an audience | Audience qualification journey (streaming audience) |
+| Scheduled multi-step flow for an audience | Read audience journey |
+| Something happened to many people (back in stock) | Business event journey |
+
+Guardrails to quote: unitary + qualification journeys share 5,000 events/s per org; 5-minute default re-entrance; 64 KB journey event size.
+
+## 11. Governance quick reference (Ch 14)
+
+| Label | Meaning |
+| --- | --- |
+| C2 | No export to third parties (core policy "3rd party export restriction") |
+| C12 | No export at all |
+| I1 / I2 | Directly / indirectly identifiable |
+| S1 / S2 | Precise location / broad geofence |
+
+Policy = label + marketing action. Destinations need marketing actions. Consent: model on profile, dataset precedence, consent policies (by licence).
+
+## 12. CJA in one line each (Ch 13)
+
+- **Connection**: datasets + person ID. **Data view**: how fields behave in reports. **Stitching**: field-based (dataset fields) or graph-based (identity graph).

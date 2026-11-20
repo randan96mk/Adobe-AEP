@@ -62,12 +62,8 @@ All code uses placeholders such as `<YOUR_TENANT_ID>`. Credentials are read from
 
 > Limits ("guardrails") quoted in this guide are Adobe's documented defaults at the time of writing; your licence can differ, and Adobe updates them. Each chapter links to the live page.
 
-## Progress
+## What's in the course
 
-| Batch | Chapters | Status |
-| --- | --- | --- |
-| 1 | README, Ch 0-3, cheat sheets, auth and schema code | Done |
-| 2 | Ch 4-6, identity, ingestion and Web SDK code | Done |
-| 3 | Ch 7-10, profile, audience, query and destination code | Done |
-| 4 | Ch 11-14, Journey Optimizer and privacy code | Done |
-| 5 | Ch 15-16, lab, glossary, references | Planned |
+17 chapters, a hands-on lab, cheat sheets, a glossary, a references page with official docs and videos, and working code (Python API scripts, XDM JSON, Web SDK JavaScript, SQL, PQL and Journey Optimizer examples).
+
+Content is current as of November 2026. If you find a link Adobe has moved, search its title on [Experience League](https://experienceleague.adobe.com).

@@ -46,7 +46,9 @@ class AEPClient:
         sandbox: str | None = None,
         scopes: str | None = None,
         timeout: int = 60,
+        max_retries: int = 4,
     ) -> None:
+        self.max_retries = max_retries
         self.client_id = client_id or _require("AEP_CLIENT_ID")
         self.client_secret = client_secret or _require("AEP_CLIENT_SECRET")
         self.org_id = org_id or _require("AEP_ORG_ID")
@@ -93,7 +95,18 @@ class AEPClient:
     # ---------- HTTP helpers ----------
     def request(self, method: str, path: str, *, headers: dict[str, str] | None = None, **kwargs: Any) -> Any:
         url = path if path.startswith("http") else f"{PLATFORM_URL}{path}"
-        resp = self.session.request(method, url, headers=self.headers(headers), timeout=self.timeout, **kwargs)
+        # Retry rate limits (429) and transient server errors with exponential back-off.
+        # Only idempotent methods are retried on 5xx, so a POST is never sent twice by accident.
+        for attempt in range(self.max_retries + 1):
+            resp = self.session.request(method, url, headers=self.headers(headers), timeout=self.timeout, **kwargs)
+            retryable = resp.status_code == 429 or (resp.status_code >= 500 and method in ("GET", "PUT", "DELETE"))
+            if not retryable or attempt == self.max_retries:
+                break
+            try:
+                wait = float(resp.headers.get("Retry-After", 2 ** attempt))
+            except ValueError:  # Retry-After given as an HTTP date
+                wait = 2 ** attempt
+            time.sleep(min(wait, 60))
         if resp.status_code >= 400:
             raise AEPError(f"{method} {url} -> {resp.status_code}: {resp.text[:2000]}")
         if not resp.content:
