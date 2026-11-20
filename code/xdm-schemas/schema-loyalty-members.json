@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "title": "Acme - Loyalty Members - CRM",
+  "description": "Loyalty members from the CRM. Primary identity: loyaltyId.",
+  "allOf": [
+    { "$ref": "https://ns.adobe.com/xdm/context/profile" },
+    { "$ref": "https://ns.adobe.com/xdm/context/profile-person-details" },
+    { "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details" },
+    { "$ref": "<CUSTOM_FIELD_GROUP_$ID>" }
+  ]
+}

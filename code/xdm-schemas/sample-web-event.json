@@ -1,0 +1,16 @@
+{
+  "_id": "8d2f1b0e-6a7f-4c1e-9d0b-2b1f4a9b7c11",
+  "timestamp": "2026-11-20T10:15:30.000Z",
+  "eventType": "commerce.productViews",
+  "identityMap": {
+    "ECID": [{ "id": "56789012345678901234567890123456789012", "authenticatedState": "ambiguous", "primary": true }],
+    "loyaltyId": [{ "id": "L-100234", "authenticatedState": "authenticated", "primary": false }]
+  },
+  "web": {
+    "webPageDetails": { "name": "Running Shoes - Product", "URL": "https://www.example.com/shoes/run-100" }
+  },
+  "commerce": { "productViews": { "value": 1 } },
+  "productListItems": [
+    { "SKU": "RUN-100", "name": "Run 100", "priceTotal": 89.99, "quantity": 1, "currencyCode": "GBP" }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "title": "Acme Loyalty Details",
+  "description": "Loyalty programme attributes of a person (custom field group, Profile class).",
+  "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
+  "definitions": {
+    "loyalty": {
+      "properties": {
+        "_<TENANT_ID>": {
+          "type": "object",
+          "properties": {
+            "loyalty": {
+              "type": "object",
+              "title": "Loyalty",
+              "properties": {
+                "loyaltyId": { "type": "string", "title": "Loyalty ID", "description": "Loyalty member number (primary identity)." },
+                "tier": { "type": "string", "title": "Tier", "enum": ["bronze", "silver", "gold", "platinum"],
+                          "meta:enum": { "bronze": "Bronze", "silver": "Silver", "gold": "Gold", "platinum": "Platinum" } },
+                "points": { "type": "integer", "title": "Points balance", "minimum": 0 },
+                "joinDate": { "type": "string", "format": "date", "title": "Join date" },
+                "status": { "type": "string", "title": "Status", "enum": ["active", "inactive", "closed"] }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [{ "$ref": "#/definitions/loyalty" }]
+}

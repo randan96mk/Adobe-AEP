@@ -1,0 +1,9 @@
+{
+  "@type": "xdm:descriptorIdentity",
+  "xdm:sourceSchema": "<SCHEMA_$ID>",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/_<TENANT_ID>/loyalty/loyaltyId",
+  "xdm:namespace": "loyaltyId",
+  "xdm:property": "xdm:code",
+  "xdm:isPrimary": true
+}

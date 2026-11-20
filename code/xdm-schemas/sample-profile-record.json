@@ -1,0 +1,9 @@
+{
+  "_<TENANT_ID>": {
+    "loyalty": { "loyaltyId": "L-100234", "tier": "gold", "points": 4200, "joinDate": "2021-03-14", "status": "active" }
+  },
+  "person": { "name": { "firstName": "Asha", "lastName": "Rao" }, "birthDate": "1990-07-21" },
+  "personalEmail": { "address": "asha.rao@example.com" },
+  "mobilePhone": { "number": "+441234567890" },
+  "homeAddress": { "city": "London", "country": "United Kingdom", "postalCode": "SW1A 1AA" }
+}
